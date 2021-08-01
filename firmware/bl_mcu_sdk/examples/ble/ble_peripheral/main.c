@@ -177,7 +177,7 @@ int main(void)
 
     MSG("[OS] ble_init_task.....\r\n");
     xTaskCreateStatic(ble_init_task, (char *)"ble_init", sizeof(ble_init_stack) / 4, NULL, 15, ble_init_stack, &ble_init_task_h);
-
+    MSG("[OS] running.....\r\n");
     vTaskStartScheduler();
 
     BL_CASE_SUCCESS;
